@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rhythm Of Pens</title>
+	<script src="js/jquery-2.1.4.min.js">
+</script>
+</head>
+<body>
+	<img src="http://i.imgur.com/vrIvRLi.jpg" id="pen">
+	<section class="outside" id="top">
+		<div class="container">											
+			<a href="index.html"><div class="button"><span>HOME</span></div></a>
+			<a href="about.html"  id="linkme"><div class="button"><span>ABOUT ME</span></div></a>
+			<a href="page_gallery.html"><div class="button"><span>GALLERY</span></div></a>
+			<a href="page_contact.html"><div class="button"><span>CONTACT</span></div></a>
+		</div>
+	</section>
+		
+	<section class="outside" id="main_part">
+		<div id="middle">
+			<div id="midpic">
+				<img id="shin" src="http://i.imgur.com/meiT9El.jpg">
+			</div>
+
+			<div id="midinfo">
+				<ul id="info">
+					<li><span>Name : Shin（文信）</span></li>
+					<li><span>Horoscope : Aries</span></li>
+					<li><span>Interest : Painting,basketball,video games,and so on.</span></li>
+					<li><span>Education : NTUE-DTD（2014-2018）</span></li>
+					<li><span>City and Country : Taipei,Taiwan</span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div><span>Copyright © 2015. All rights reserved</span></div>
+	</footer>
+
+</body>
+<style type="text/css">
+	html {
+	height:100%;
+}
+
+body {
+	font-family: "Microsoft JhengHei", "微軟正黑體";
+	background-color: rgb(244,244,244);
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(245,245,245);
+}
+
+footer {
+	height: 8%;
+	background-color: rgb(040,130,195);
+	text-align: center;
+}
+
+.outside {
+	width: 100%;
+	display: block;
+}
+
+#top {
+	height: 12%;
+	background-color: rgb(040,130,195);
+	text-align: center;
+
+}
+
+.container {
+	height: 100%;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 1s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
+.button {
+	display: inline-block;
+	height: 100%;
+	width: 10%;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+}
+
+.button span {
+	color:white;
+	letter-spacing: 3px;
+}
+
+.button:hover{
+	-webkit-animation-name: ButtonFade; 
+    -webkit-animation-duration: 1s; 
+    -webkit-animation-iteration-count: 1; 
+    -webkit-animation-delay: 0s; 
+    background-color: rgba(230,255,255,0.5);
+}
+
+
+#middle {
+	padding-top: 10%;
+	height: 90%;
+}
+
+#main_part {
+	height: 80%;
+	width: 70%;
+	padding-left: 15%;
+
+}
+
+#pen {
+	position: absolute;
+	z-index:-1;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+
+	-webkit-animation-name: backpic; 
+    -webkit-animation-duration: 2s; 
+    -webkit-animation-iteration-count:1; 
+    -webkit-animation-delay: 0s;
+}
+
+#shin  {
+	position: relative;
+	width: 35%;
+	height: 35%;
+	float: left;
+}
+
+#info {
+	width: 60%;
+	display: inline-block;
+	color: black;
+	font-weight: bold;
+	font-size: 150%;
+	float: right;
+	padding-left: 5%;
+	margin-top:20px;
+	text-align: left;
+	list-style-type: none;
+	line-height: 230%;
+}
+
+#midpic{
+	-webkit-animation-name: Show; 
+    -webkit-animation-duration: 3s; 
+    -webkit-animation-iteration-count: 1; 
+    -webkit-animation-delay: 0s;
+}
+
+#midinfo{
+	-webkit-animation-name: Show; 
+    -webkit-animation-duration: 4s; 
+    -webkit-animation-iteration-count: 1; 
+    -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes FadeIn {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+@-webkit-keyframes Show {
+    0% {
+    	visibility:hidden;
+        opacity: 0; 
+    }
+
+	50% {
+		visibility:hidden;
+		opacity: 0;
+	}
+
+    100% {
+        opacity: 1; 
+    }
+}
+
+@-webkit-keyframes ButtonFade {
+    0% {
+    	background-color: rgba(040,130,195,0);
+    }
+
+    100% {
+    	background-color: rgba(040,130,195,0.5);
+    }
+}
+
+@-webkit-keyframes backpic{
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 0.5; 
+    }
+}
+
+footer span{
+	vertical-align: middle;
+	font-size: 100%;
+	color: white;
+}
+
+footer div{
+	padding-top:1%;
+	vertical-align: middle;
+	font-size: 100%;
+	color: white;
+}
+</style>
+</html>
