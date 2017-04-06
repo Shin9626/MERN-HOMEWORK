@@ -3,7 +3,7 @@ var fs = require('fs');
 
 http.createServer(function (req, res) {
 
-    if(req.url==='/index.html'){
+    if(req.url ==='/index.html'){
         fs.createReadStream(__dirname+'/index.html').pipe(res);       
     }
     else if (req.url === '/about.html') {
@@ -20,4 +20,4 @@ http.createServer(function (req, res) {
         res.end(oops404);
     }
     
-}).listen(1234, '127.0.0.1');
+}).listen(3000, '127.0.0.1');
